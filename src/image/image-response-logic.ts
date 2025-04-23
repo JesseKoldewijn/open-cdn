@@ -1,4 +1,3 @@
-import { Context } from "vm";
 import { z } from "zod";
 import { getFileCache } from "../cache/get-cache";
 import { setFileCache } from "../cache/set-cache";
@@ -11,6 +10,7 @@ import { createCacheHash } from "../cache/utils";
 import { db } from "../db/connection";
 import { files } from "../db/schema";
 import { eq } from "drizzle-orm";
+import { Context } from "hono";
 
 const getParams = (c: Context, isDirectQuery?: boolean) => {
 	const params = c.req.param();
@@ -86,11 +86,11 @@ export const returnImageResponseFromContext = async (
 
 	const validationResult = paramValidator.safeParse(params);
 
-	if (!validationResult.success) {
+	if (!validationResult.success || !searchParams) {
 		return c.json(
 			{
 				error: "Invalid URL parameters",
-				details: validationResult.error.format(),
+				details: validationResult.error?.format(),
 				input: params,
 			},
 			{ status: 400 }
@@ -119,7 +119,9 @@ export const returnImageResponseFromContext = async (
 		);
 	}
 
-	const { width, height, quality, format } = getImageParams(searchParams);
+	const { width, height, quality, format } = getImageParams(
+		searchParams as Record<string, string>
+	);
 
 	const cache = await getFileCache(file.url.href.toString(), {
 		width,
