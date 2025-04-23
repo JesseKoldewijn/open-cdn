@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/jesse/wsl-projects/oss/cdn.jereko.dev/src/app/layout.tsx"],"sourcesContent":["import \"../styles/tailwind.css\";\n\nconst RootLayout = ({ children }: { children: React.ReactNode }) => {\n  return (\n    <html lang=\"en\" className=\"system\">\n      <body>\n        <main>{children}</main>\n      </body>\n    </html>\n  );\n};\n\nexport default RootLayout;\n"],"names":[],"mappings":";;;;;;AAEA,MAAM,aAAa,CAAC,EAAE,QAAQ,EAAiC;IAC7D,qBACE,6WAAC;QAAK,MAAK;QAAK,WAAU;kBACxB,cAAA,6WAAC;sBACC,cAAA,6WAAC;0BAAM;;;;;;;;;;;;;;;;AAIf;uCAEe","debugId":null}},
-    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":["file:///home/jesse/wsl-projects/oss/cdn.jereko.dev/node_modules/.pnpm/next%4015.3.1_react-dom%4019.1.0_react%4019.1.0__react%4019.1.0/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,uMAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0],"debugId":null}}]
-}
