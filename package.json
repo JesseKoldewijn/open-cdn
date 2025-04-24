@@ -1,36 +1,44 @@
 {
-	"name": "open-cdn",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "exit 0",
-		"vercel:dev": "vercel dev",
-		"vercel:deploy": "vercel",
-		"db:push": "drizzle-kit push",
-		"db:studio": "drizzle-kit studio",
-		"test": "vitest --run",
-		"test:watch": "vitest",
-		"test:ui": "vitest --ui",
-		"test:coverage": "vitest --coverage"
-	},
-	"dependencies": {
-		"dotenv": "^16.5.0",
-		"drizzle-orm": "^0.42.0",
-		"hono": "^4.7.7",
-		"mysql2": "^3.14.0",
-		"redis": "^4.7.0",
-		"sharp": "^0.34.1",
-		"zod": "^3.24.3"
-	},
-	"devDependencies": {
-		"@hono/vite-dev-server": "^0.19.0",
-		"@types/node": "^22.14.1",
-		"drizzle-kit": "^0.31.0",
-		"tsx": "^4.19.3",
-		"typescript": "^5.8.3",
-		"vercel": "^32.4.1",
-		"vite": "^6.3.2",
-		"vitest": "^3.1.1"
-	},
-	"packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531"
+  "name": "open-cdn",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.42.0",
+    "hono": "^4.7.7",
+    "mysql2": "^3.14.0",
+    "next": "^15.3.1",
+    "postcss": "^8.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "redis": "^4.7.0",
+    "sharp": "^0.34.1",
+    "tailwindcss": "^4.1.4",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@hono/vite-dev-server": "^0.19.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^22.14.1",
+    "@types/react": "19.1.2",
+    "drizzle-kit": "^0.31.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vercel": "^32.4.1",
+    "vite": "^6.3.2",
+    "vitest": "^3.1.1"
+  },
+  "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531"
 }

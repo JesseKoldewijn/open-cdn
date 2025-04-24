@@ -10,7 +10,8 @@
 .idea/shelf
 
 # build
-dist/
+.next/
+out/
 
 # deps
 node_modules/

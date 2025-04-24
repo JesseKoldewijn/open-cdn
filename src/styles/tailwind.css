@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--color-neutral-100);
+  --color-foreground: var(--color-neutral-800);
+}
+
+.dark {
+  --color-background: var(--color-neutral-800);
+  --color-foreground: var(--color-neutral-100);
+}
+
+.light {
+  --color-background: var(--color-neutral-100);
+  --color-foreground: var(--color-neutral-800);
+}
+
+.system {
+  @media (prefers-color-scheme: dark) {
+    --color-background: var(--color-neutral-800);
+    --color-foreground: var(--color-neutral-100);
+  }
+  @media (prefers-color-scheme: light) {
+    --color-background: var(--color-neutral-100);
+    --color-foreground: var(--color-neutral-800);
+  }
+  @media (prefers-color-scheme: no-preference) {
+    --color-background: var(--color-neutral-100);
+    --color-foreground: var(--color-neutral-800);
+  }
+}
+
+:root {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
