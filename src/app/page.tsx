@@ -12,13 +12,13 @@ const HomePage = async () => {
           <div className="flex flex-col gap-2 text-sm">
             <strong>Direct Query</strong>
             <code className="bg-foreground/20 w-screen max-w-[90svw] overflow-x-scroll rounded-md p-2 text-sm text-nowrap md:max-w-lg">
-              {`<img src='${buildExampleUrl(refUrl, "direct-query")}' />`}
+              {`<img src='${buildExampleUrl(refUrl, "direct-query")}' />`.replace("https://jereko.dev", "")}
             </code>
           </div>
           <div className="flex flex-col gap-2 text-sm">
             <strong>Indirect Query</strong>
             <code className="bg-foreground/20 w-screen max-w-[90svw] overflow-x-scroll rounded-md p-2 text-sm text-nowrap md:max-w-lg">
-              {`<img src='${buildExampleUrl(refUrl, "indirect")}' />`}
+              {`<img src='${buildExampleUrl(refUrl, "indirect")}' />`.replace("https://jereko.dev", "")}
             </code>
           </div>
         </div>
