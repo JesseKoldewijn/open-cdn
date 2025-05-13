@@ -11,7 +11,9 @@ export const getFileUrl = ({
 }) => {
   try {
     return {
-      url: new URL(`${proto}://${domain}.${tld}/${filepath}`),
+      url: new URL(
+        `${proto}://${domain}.${tld}${filepath?.startsWith("/") ? "" : "/"}${filepath}`,
+      ),
       error: null,
     };
   } catch (error) {
